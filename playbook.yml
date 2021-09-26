@@ -1,5 +1,5 @@
 site:
-  title: Cours git - supports de TP
+  title: Cours git
   start_page: cours-git-supports-tp::index.adoc
 content:
   sources:

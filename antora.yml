@@ -1,4 +1,5 @@
 name: cours-git-supports-tp
+title: Supports de TP
 version: 0.1
 nav:
 - modules/ROOT/nav.adoc
