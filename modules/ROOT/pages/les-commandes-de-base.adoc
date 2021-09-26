@@ -1,0 +1,97 @@
+= Les commandes de base
+Florent Nuttens
+0.1, 2021-09-26
+:toc:
+:toc-title: Sommaire
+
+== Mise en place et instructions
+
+Vous aurez besoin pour ce TP de https://gitforwindows.org/[git et git bash].
+
+À la fin de la séance, vous déposerez une archive (ZIP ou équivalent) contenant vos travaux à https://drive.google.com/drive/folders/1Lye4CJje6IBkL5yYrlCLS3KILL1MhJfl?usp=sharing[cette adresse]. Votre fichier sera nommé au format *NOM_prénom_TP01*.
+
+.Il contiendra :
+* l'intégralité de votre dossier de travail (le dossier masqué .git doit être présent)
+* un document (PDF, ODF, DOCX, TXT, etc.) contenant les commandes exécutées lors de ce TP
+
+Vous êtes libre d'ajouter à votre rapport les difficultés rencontrées.
+
+== Votre premier dépôt
+
+Créez un dossier pour accueillir votre projet. Placez-y un fichier `index.html` avec le contenu suivant :
+
+[source, html]
+----
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Welcome</title>
+</head>
+
+<body>
+	<h1>This is a Heading</h1>
+	<p>This is a paragraph</p>
+</body>
+
+</html>
+----
+
+Initialisez un dépôt git dans le dossier. Vous devez obtenir un message similaire à ceci :
+
+----
+Initialized empty Git repository in C:/repositories/mon-site/.git/
+----
+
+Configurez votre nom et adresse email dans git afin que vos prochains commits soient associés à votre identité. Vous pouvez définir ces paramètres de manière globale à l'aide de l'option `--global`.
+
+TIP: Si vous avez déjà configuré votre identité de manière globale, alors vous n'avez pas besoin de le faire à nouveau.
+
+Affichez l'état du dépôt. Le résultat doit être similaire à ceci :
+
+----
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+----
+
+Ajoutez le fichier index.html à l'index git. Consultez à nouveau l'état du dépôt. Le résultat doit être similaire à ceci :
+
+----
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+----
+
+Enregistrez un nouveau commit à partir des modifications présentes dans l'index.
+
+.Vous préciserez le message suivant :
+[quote]
+feat: ajoute le fichier index.html
+
+Le résultat suivant devrait s'afficher :
+
+----
+[master (root-commit) b063607] feat: ajoute le fichier index.html
+ 1 file changed, 13 insertions(+)
+ create mode 100644 index.html
+----
+
+== Questions
+
+.Répondez aux questions suivantes dans votre rapport :
+. Deux commits peuvent-ils avoir le même identifiant (hash) ? Si oui, dans quel cas ?
+. Peut-on ajouter en une seule commande tous les fichiers du répertoire de travail à l'index ? Si oui, comment ?
+. Peut-on ajouter un fichier à l'index si celui-ci n'est pas dans le répertoire de travail ? Si oui, comment ?
+. Pensez-vous que certaines entreprises n'ont pas besoin d'utiliser de VCS ? Justifiez votre réponse en donnant quelques exemples. Ce n'est pas une question piège, la réponse "oui" est admissible tant qu'elle est justifiée.
+. Une fois un fichier ajouté à l'index, est-il possible de l'en retirer ? Si oui, par quel moyen ?
