@@ -75,9 +75,11 @@ Changes to be committed:
 
 Enregistrez un nouveau commit à partir des modifications présentes dans l'index.
 
-.Vous préciserez le message suivant :
-[quote]
+Vous préciserez le message suivant :
+
+----
 feat: ajoute le fichier index.html
+----
 
 Le résultat suivant devrait s'afficher :
 
